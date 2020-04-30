@@ -1,0 +1,28 @@
+/**
+/* Sizes
+* ======
+* - small: < 40em
+* - medium: 40em and < 640em
+* - large 640em and greater
+*/
+@media screen and (max-width: 39.99em) {
+  article {
+    column-count: 1;
+  }
+}
+@media screen and (min-width: 40em) and (max-width: 63.99em) {
+  article {
+    column-count: 2;
+  }
+}
+@media screen and (min-width: 64em) {
+  article {
+    column-count: 3;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  margin: 3em;
+}
