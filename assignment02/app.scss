@@ -1,17 +1,18 @@
-@mixin size($size) {
-    @if $size == small {
-        @media screen and (max-width: 39.99em) {
-            @content;
-        }
-    } 
-    @else if $size == medium {
-        @media screen and (min-width: 40em) and (max-width: 63.99em) {
-            @content;
-        }
-    } 
-    @else if $size == large {
-        @media screen and (min-width: 64em) {
-            @content;
-        }
+@import 'size';
+@import 'body';
+
+article {
+    @include size(small) {
+        column-count:1;
     }
+    @include size(medium) {
+        column-count:2;
+    }
+    @include size(large) {
+        column-count:3;
+    }
+}
+
+body {
+    @include body;
 }
