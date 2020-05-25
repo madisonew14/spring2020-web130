@@ -1,0 +1,114 @@
+@import 'colors';
+@import 'size';
+@import 'fonts';
+
+nav {
+    ul {
+        li a:hover {
+            background-color: $dark-blue;
+        }
+        // remove list styles
+        list-style-type: none;
+        padding-inline-start: 0;
+        margin: 0;
+        background-color: $light-blue;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        @include nav-font;
+        @include size(sm) {
+            flex-direction: column;
+    }
+    // ul.submenu
+    &.submenu {
+        @include size (sm) {
+            line-height:17px;
+        }
+        @include size(md) {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            border-top: 1px solid $color;
+        }
+        @include size(lg) {
+            position: absolute;
+            flex-direction: column;
+            line-height: 12px;
+            padding-top:10px;
+            padding-bottom: 14px;
+            margin-left:1px;
+            }
+        }
+    }
+    li {
+        position: relative;
+        display: block;
+        @include size (sm) {
+            .mobile-only {
+                border-bottom: 1px solid $color;
+            }
+            .submenu {
+                border-bottom: 1px solid $color;
+            }
+            #products {
+                border-top: 1px solid $color;
+                border-bottom: 1px solid $color;
+            }
+            #contact {
+                display: none;
+            }
+            #pumpkin {
+                border-top: 1px solid $color;
+            }
+        }
+        @include size(md) {
+            position: static;
+            flex-grow: 1;
+        }
+    }
+    a {
+    display: block;
+    text-align: center;
+    padding: 10px 17px 10px 17px;
+    @include size(lg) {
+        text-align: left;
+    }
+    text-decoration: none;
+    color: white;
+    }
+    // white border between list <a>
+    @include size (sm) {
+        .mobile-only {
+            border-bottom: 1px solid $color;
+        }
+    }
+    @include size (md) {
+        #products {
+            border-right: 1px solid $color;
+            border-left: 1px solid $color;
+        }
+    }
+    @include size (lg) {
+        #products {
+            border-right: 1px solid $color;
+            border-left: 1px solid $color;
+        }
+    }
+    //icon styling
+    .menu-icon {
+        display: block;
+        float: left;
+        width: 27px;
+        margin-right: -34px;
+        margin-bottom: 10px;
+        height: 22px;
+        background-image: url("/img/Hamburger.png");
+        &.open {
+            width: 27px;
+            margin-right: -27px;
+            margin-bottom: 5px;
+            height: 27px;
+            background-image: url("/img/X-Icon.png"); 
+        }
+    }
+}
