@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600;700&display=swap');
+
+$inconsolata: 'Inconsolata', monospace;
+
+@mixin nav-font {
+    font-family: $inconsolata;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
