@@ -1,0 +1,31 @@
+@import 'colors';
+@import 'fonts';
+
+.btn-primary {
+    background-color: $hover;
+    border-style: none;
+    font-family: $title-font;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.7em;
+}
+
+.btn-primary:hover {
+    background-color: $nav;
+}
+
+.btn-primary:active {
+    background-color: $hover;
+}
+
+label {
+    font-family: $title-font;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: $primary;
+}
+
+.form-control {
+    background-color: $field;
+}
