@@ -1,0 +1,15 @@
+@import 'fonts';
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    font-size: 60px;
+}
+
+h2.subtitle {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    margin-bottom: 3em;
+}
