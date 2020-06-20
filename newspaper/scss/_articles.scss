@@ -1,0 +1,73 @@
+@import 'size';
+@import 'fonts';
+@import 'colors';
+
+
+
+h1, h2, h3 {
+    font-family: $title-font;
+    color: $primary;
+}
+    
+article.col.list {
+    section {
+        min-height: 200px;
+        max-height: 300px;
+        overflow: hidden;
+        padding-bottom: 3em;
+        padding-right: 6em;
+    }
+}
+
+//responsive sizing for articles in detail view
+article.col-detail {
+    margin-top: 1em;
+        section {
+            margin-top: 2em;
+            @include size(lg) {
+                column-count:3;
+            }
+            @include size(md) {
+                column-count:2;
+        }
+            @include size (sm) {
+               column-count:1;
+           }
+   }     
+}
+
+.row {
+    padding-bottom: 2em;
+    @include size(sm) {
+        display: block;
+    }
+
+    @include size(md) {
+        display: block;
+    }
+}
+
+p {
+     font-family: $body-font;
+     line-height: 1.7;
+}
+
+
+//publication details
+small {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $details;
+}
+
+// article title
+.article-link {
+    color: $nav;
+    font-family: $title-font;
+}
+
+.article-link:hover {
+    color: $hover;
+    font-family: $title-font;
+    text-decoration: none;
+}
