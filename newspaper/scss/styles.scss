@@ -1,0 +1,22 @@
+@import '~bootstrap';
+@import 'articles';
+@import 'fonts';
+@import 'header';
+@import 'colors';
+@import 'nav';
+@import 'footer';
+@import 'form';
+
+.header {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.user {
+    display: block;
+}
+
+.auth-user {
+    display: none
+}
+
