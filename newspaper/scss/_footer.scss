@@ -1,0 +1,19 @@
+@import 'fonts';
+@import 'colors';
+
+footer {
+    margin-top:2em;
+    display: flex;
+    justify-content: center;
+    font-family: $title-font;
+    color: $primary;
+    background-color: $nav;
+    height: 3em;
+}
+
+h4.footer-title {
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: auto;
+    letter-spacing: 2px;
+}
